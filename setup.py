@@ -11,17 +11,6 @@ setup(
     author="Rafal Janicki @bl4de",
     author_email="bloorq@gmail.com",
     license="MIT",
-    classifiers=[
-        "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.7",
-    ],
     packages=["ctfpwn"],
-    include_package_data=True,
-    install_requires=["requests", "hashlib"],
-    entry_points={
-        "console_scripts": [
-            "ctfpwn=ctfpwn.__main__:main",
-        ]
-    },
+    install_requires=["requests", "hashlib"]
 )
