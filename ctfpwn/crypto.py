@@ -1,4 +1,5 @@
 import base64
+import hashlib
 
 
 def rot13(ciphertext, step=13):
@@ -20,6 +21,20 @@ def rot13(ciphertext, step=13):
     return valid
 
 
+def md5(s):
+    """
+    returns ready-to-use MD5 hash
+    """
+    return hashlib.md5(s).hexdigest()
+
+
+def sha1(s):
+    """
+    returns ready-to-use SHA1 hash
+    """
+    return hashlib.sha1(s).hexdigest()
+
+
 def to_base64(s):
     """
     returns Base64-ed string
@@ -31,6 +46,4 @@ def from_base64(s):
     """
     returns base64 plaintext
     """
-    return base64.b64encode(s)
-
-
+    return base64.b64decode(s)
