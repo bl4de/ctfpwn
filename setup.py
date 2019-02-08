@@ -12,5 +12,5 @@ setup(
     author_email="bloorq@gmail.com",
     license="MIT",
     packages=["ctfpwn"],
-    install_requires=["requests", "hashlib"]
+    install_requires=["requests"]
 )

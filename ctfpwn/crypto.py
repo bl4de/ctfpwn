@@ -1,3 +1,6 @@
+import base64
+
+
 def rot13(ciphertext, step=13):
     """
     Executes ROT 13 on ciphertext
@@ -15,3 +18,19 @@ def rot13(ciphertext, step=13):
             valid += ciphertext[x]
 
     return valid
+
+
+def to_base64(s):
+    """
+    returns Base64-ed string
+    """
+    return base64.b64encode(s)
+
+
+def from_base64(s):
+    """
+    returns base64 plaintext
+    """
+    return base64.b64encode(s)
+
+
