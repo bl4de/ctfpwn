@@ -32,9 +32,9 @@ def http_headers(url, _header=""):
     return _headers
 
 
-def find_in_response(url, to_find):
+def find_in_response(url, query):
     """
     check if HTTP response contains 'to_find' string
     returns True if found, False otherwise
     """
-    return True if to_find in http_get(url) else False
+    return True if query in http_get(url) else False
