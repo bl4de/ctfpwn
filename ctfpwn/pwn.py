@@ -1,3 +1,5 @@
+# ctfpwn/pwn - barebone exploitation/pwning stuff  :)
+
 import cPickle
 import os
 

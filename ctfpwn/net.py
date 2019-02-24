@@ -1,3 +1,5 @@
+# ctfpwn/net - network routines - HTTP request/responses handling etc. :)
+
 import requests
 
 headers = {
