@@ -28,6 +28,7 @@ class CtfpwnTestSuite(unittest.TestCase):
 
     def test_split_string(self):
         self.assertEqual(ctfpwn.split_string('AAAAAA', 2), 'AA AA AA')
+        self.assertEqual(ctfpwn.split_string('1001001110010101', 4), '1001 0011 1001 0101')
 
 
 if __name__ == '__main__':
