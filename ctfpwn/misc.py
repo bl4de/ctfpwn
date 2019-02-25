@@ -19,7 +19,7 @@ def split_string(__string, __chunk_length):
         chunked = chunked + __string[str_pos:str_pos+__chunk_length] + " "
         str_pos = str_pos + __chunk_length
 
-    return chunked
+    return chunked.strip()
 
 
 def transform_string_into_array(__string, __array_type):

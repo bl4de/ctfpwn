@@ -26,6 +26,9 @@ class CtfpwnTestSuite(unittest.TestCase):
         self.assertEqual(ctfpwn.http_headers(test_url, 'Content-Encoding'),
                          'gzip')
 
+    def test_split_string(self):
+        self.assertEqual(ctfpwn.split_string('AAAAAA', 2), 'AA AA AA')
+
 
 if __name__ == '__main__':
     print("\nctfpwn Test Suite\n\n")
