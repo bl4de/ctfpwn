@@ -1,6 +1,33 @@
 # ctfpwn/misc - misc routines do do misc stuff :)
 
 
+def get_character_set(lc=False, uc=False, nb=False, sc=False):
+    """
+    returns string of characters for misc iterations
+    lc - lowercase
+    uc - uppercase
+    nb - numbers
+    sc - special characters
+    """
+    lc_char_set = 'abcdefghijklmnopqrstuwvyxz'
+    uc_char_set = 'ABCDEFGHIJKLMNOPQRSTUWVXYZ'
+    nb_char_set = '0123456789'
+    sc_char_set = '._-()[]{}/\?!@#$%^&*'
+
+    char_set = ''
+
+    if lc == True:
+        char_set = char_set + lc_char_set
+    if uc == True:
+        char_set = char_set + uc_char_set
+    if nb == True:
+        char_set = char_set + nb_char_set
+    if sc == True:
+        char_set = char_set + sc_char_set
+
+    return char_set
+
+
 def split_string(__string, __chunk_length):
     """
     splits string into __chunk_length len chunks
