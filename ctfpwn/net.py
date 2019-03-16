@@ -20,6 +20,17 @@ def http_get(url, h=False):
     return resp.content
 
 
+def http_post(url, post_data, h=False):
+    """
+    executes HTTP POST request
+    """
+    global hd
+    if h:
+        hd = h
+    resp = requests.post(url, data=post_data, headers=h)
+    return resp.content
+
+
 def get_http_response_header(url, header_name, h=False):
     """
     returns 'header_name' HTTP response header from the server
