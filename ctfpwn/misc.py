@@ -64,3 +64,10 @@ def transform_string_into_array(__string, __array_type):
 
     # return __string if no __array_type is defined or unknown
     return __string
+
+
+def load_dictionary(path_to_dictionary):
+    """
+    loads dictionary file and returns it as lines
+    """
+    return open(path_to_dictionary).readlines()
