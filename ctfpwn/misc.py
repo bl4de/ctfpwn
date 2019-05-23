@@ -12,7 +12,7 @@ def get_character_set(lc=False, uc=False, nb=False, sc=False):
     lc_char_set = 'abcdefghijklmnopqrstuwvyxz'
     uc_char_set = 'ABCDEFGHIJKLMNOPQRSTUWVXYZ'
     nb_char_set = '0123456789'
-    sc_char_set = '._-()[]{}/\?!@#$%^&*'
+    sc_char_set = '._-()[]{}/\?!@#$%^&*:;\'`|,\\%+='
 
     char_set = ''
 
@@ -64,3 +64,17 @@ def transform_string_into_array(__string, __array_type):
 
     # return __string if no __array_type is defined or unknown
     return __string
+
+
+def hex_to_ascii(__hex):
+    """
+    translates hex byte values into ASCII string
+    """
+    return ''.join([chr(int(c, 16)) for c in transform_string_into_array(__hex, 'ascii')])
+
+
+def ascii_to_hex(__ascii):
+    """
+    translates ASCII string into an array of hex ASCII codes
+    """
+    return [hex(ord(c)).replace('0x','') for c in __ascii]
