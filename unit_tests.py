@@ -3,7 +3,6 @@ import unittest
 import ctfpwn
 
 test_url = 'https://google.ie'
-
 hs = '5374657068616e69652052616f'
 b64s = 'U3RlcGhhbmllIFJhbw=='
 ps = 'Stephanie Rao'
