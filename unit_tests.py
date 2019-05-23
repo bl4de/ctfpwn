@@ -20,8 +20,9 @@ class CtfpwnTestSuite(unittest.TestCase):
                          '21232f297a57a5a743894a0e4a801fc3')
 
     def test_find_in_response(self):
-        self.assertTrue(ctfpwn.find_in_response(test_url, 'Google'))
-        self.assertFalse(ctfpwn.find_in_response(test_url, 'XYZXYZ'))
+        resp = ctfpwn.http_get(test_url)
+        self.assertTrue(ctfpwn.find_in_response(resp, 'Google'))
+        self.assertFalse(ctfpwn.find_in_response(resp, 'XYZXYZ'))
 
     def test_http_headers(self):
         self.assertEqual(ctfpwn.http_headers(test_url, 'Content-Encoding'),

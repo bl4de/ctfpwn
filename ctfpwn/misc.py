@@ -78,3 +78,10 @@ def ascii_to_hex(__ascii):
     translates ASCII string into an array of hex ASCII codes
     """
     return [hex(ord(c)).replace('0x','') for c in __ascii]
+
+    
+def load_dictionary(path_to_dictionary):
+    """
+    loads dictionary file and returns it as lines
+    """
+    return open(path_to_dictionary).readlines()
