@@ -1,4 +1,6 @@
 from setuptools import setup
+# install localy:
+# python -m pip install -e ctfpwn
 
 # This call to setup() does all the work
 setup(

@@ -73,8 +73,15 @@ def hex_to_ascii(__hex):
     return ''.join([chr(int(c, 16)) for c in transform_string_into_array(__hex, 'ascii')])
 
 
-def ascii_to_hex(__ascii):
+def hex_array_to_ascii(__hex_array):
     """
+    translates array of hex integers into ascii string
+    """
+    return ''.join(chr(c) for c in __hex_array)
+
+
+def ascii_to_hex(__ascii):
+    """ 
     translates ASCII string into an array of hex ASCII codes
     """
     return [hex(ord(c)).replace('0x','') for c in __ascii]
