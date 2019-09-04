@@ -7,12 +7,13 @@ hs = '5374657068616e69652052616f'
 b64s = 'U3RlcGhhbmllIFJhbw=='
 ps = 'Stephanie Rao'
 
+
 class CtfpwnTestSuite(unittest.TestCase):
     def test_to_base64(self):
-        self.assertEqual(ctfpwn.to_base64(ps),b64s)
+        self.assertEqual(ctfpwn.to_base64(ps), b64s)
 
     def test_from_base64(self):
-        self.assertEqual(ctfpwn.from_base64(b64s),ps)
+        self.assertEqual(ctfpwn.from_base64(b64s), ps)
 
     def test_md5(self):
         self.assertEqual(ctfpwn.md5('admin'),
@@ -29,7 +30,8 @@ class CtfpwnTestSuite(unittest.TestCase):
 
     def test_split_string(self):
         self.assertEqual(ctfpwn.split_string('AAAAAA', 2), 'AA AA AA')
-        self.assertEqual(ctfpwn.split_string('1001001110010101', 4), '1001 0011 1001 0101')
+        self.assertEqual(ctfpwn.split_string(
+            '1001001110010101', 4), '1001 0011 1001 0101')
 
     def test_hex_to_ascii(self):
         self.assertEqual(ctfpwn.hex_to_ascii(hs), ps)

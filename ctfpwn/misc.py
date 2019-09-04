@@ -73,6 +73,13 @@ def hex_to_ascii(__hex):
     return ''.join([chr(int(c, 16)) for c in transform_string_into_array(__hex, 'ascii')])
 
 
+def dec_to_ascii(__dec):
+    """
+    translates dec byte values into ASCII string
+    """
+    return ''.join([chr(int(c, 10)) for c in transform_string_into_array(__dec, 'ascii')])
+
+
 def hex_array_to_ascii(__hex_array):
     """
     translates array of hex integers into ascii string
@@ -84,9 +91,23 @@ def ascii_to_hex(__ascii):
     """ 
     translates ASCII string into an array of hex ASCII codes
     """
-    return [hex(ord(c)).replace('0x','') for c in __ascii]
+    return [hex(ord(c)).replace('0x', '') for c in __ascii]
 
-    
+
+def hex_to_dec(__hex):
+    """
+    translate hex to dec
+    """
+    return ''.join([c for c in transform_string_into_array(__hex, 'ascii')])
+
+
+def dec_to_hex(__dec):
+    """
+    translate hex to dec
+    """
+    return ''.join([hex(int(c,16)) for c in transform_string_into_array(__dec, 'ascii')])
+
+
 def load_dictionary(path_to_dictionary):
     """
     loads dictionary file and returns it as lines
