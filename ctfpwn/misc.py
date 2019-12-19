@@ -1,7 +1,7 @@
 # ctfpwn/misc - misc routines do do misc stuff :)
 
 
-def get_character_set(lc=False, uc=False, nb=False, sc=False):
+def get_character_set(lc=True, uc=True, nb=True, sc=True):
     """
     returns string of characters for misc iterations
     lc - lowercase

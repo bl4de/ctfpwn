@@ -16,7 +16,7 @@ def http_get(url, h=False):
     global hd
     if h:
         hd = h
-    resp = requests.get(url, headers=hd)
+    resp = requests.get(url, headers=hd, allow_redirects=False)
     return resp.content
 
 
@@ -27,7 +27,7 @@ def http_post(url, post_data, h=False):
     global hd
     if h:
         hd = h
-    resp = requests.post(url, data=post_data, headers=h)
+    resp = requests.post(url, data=post_data, headers=h, allow_redirects=False)
     return resp.content
 
 
@@ -38,7 +38,7 @@ def get_http_response_header(url, header_name, h=False):
     global hd
     if h:
         hd = h
-    resp = requests.get(url, headers=hd)
+    resp = requests.get(url, headers=hd, allow_redirects=False)
     return resp.headers[header_name]
 
 
@@ -48,7 +48,7 @@ def http_headers(url, _header=""):
     {header1: value1, ...., headerN: valueN,}
     or _header, if set
     """
-    resp = requests.get(url, headers=hd)
+    resp = requests.get(url, headers=hd, allow_redirects=False)
     _headers = resp.headers
 
     # return single _header, if set:
