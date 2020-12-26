@@ -5,7 +5,7 @@ from setuptools import setup
 # This call to setup() does all the work
 setup(
     name="ctfpwn",
-    version="1.0.0",
+    version="3.0.1",
     description="Framework for making CTFs, bug bounty and pentesting Python scripting easier",
     long_description="README.md",
     long_description_content_type="text/markdown",
