@@ -1,6 +1,6 @@
 from setuptools import setup
 # install localy:
-# python -m pip install -e ctfpwn
+# python3 -m pip install -e .
 
 # This call to setup() does all the work
 setup(

@@ -20,6 +20,18 @@ def http_get(url, h=False):
     return resp.content
 
 
+def http_get_with_headers(url, h=False):
+    """
+    executes regular HTTP GET request to url
+    returns response body and headers
+    """
+    global hd
+    if h:
+        hd = h
+    resp = requests.get(url, headers=hd, allow_redirects=False)
+    return (resp.content, resp.headers)
+
+
 def http_post(url, post_data, h=False):
     """
     executes HTTP POST request
